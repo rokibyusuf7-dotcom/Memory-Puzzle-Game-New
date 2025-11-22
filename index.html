@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>Ultimate Memory Game</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="icon" type="image/png" href="favicon.png">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <header>
+    <img src="logo.png" id="logo">
+    <h1>Ultimate Memory Game</h1>
+  </header>
+
+  <div id="hud">
+    <span id="playerNameDisplay"></span>
+    <span id="level">Level: 1</span>
+    <span id="moves">Moves: 0</span>
+    <span id="time">Time: 0s</span>
+    <span id="stars">⭐️⭐️⭐️</span>
+    <button id="settingsBtn">⚙️</button>
+  </div>
+
+  <div id="game"></div>
+
+  <div id="winOverlay">
+    <h2>🎉 Level Complete! 🎉</h2>
+    <p id="results"></p>
+    <button id="nextLevelBtn">Next Level ▶</button>
+  </div>
+
+  <div id="settingsPopup">
+    <h2>Settings</h2>
+
+    <label>Theme:</label>
+    <select id="theme">
+      <option>Light</option>
+      <option>Dark</option>
+    </select>
+
+    <label>
+      <input type="checkbox" id="timerToggle"> Enable Timer
+    </label>
+
+    <label>
+      <input type="checkbox" id="soundToggle"> Enable Sound Effects
+    </label>
+
+    <label>
+      <input type="checkbox" id="musicToggle"> Enable Background Music
+    </label>
+
+    <button id="saveSettings">Save</button>
+  </div>
+
+  <audio id="bgMusic" loop>
+    <source src="music.mp3" type="audio/mpeg">
+  </audio>
+
+  <script src="script.js"></script>
+</body>
+</html>
